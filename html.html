@@ -1,0 +1,23 @@
+<form id="login">
+  <input type="email" id="email" placeholder="Enter Email" required>
+  <input type="password" id="pass" placeholder="Enter Password" required>
+  <button type="submit">Login</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+document.getElementById("login").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let email = document.getElementById("email").value;
+  let pass = document.getElementById("pass").value;
+
+  if (email === "test@gmail.com" && pass === "12345") {
+    document.getElementById("msg").innerText = "Login Successful!";
+    this.submit();
+  } else {
+    document.getElementById("msg").innerText = "Invalid Email or Password!";
+  }
+});
+</script>
